@@ -33,3 +33,27 @@ InsightED is a decision-support data analytics system designed for universities.
 * **The Type of Data Needed:** We need end-of-semester student survey feedback. This comes directly from the university's evaluation systems. It represents quantitative metrics (ratings from 1-5 on faculty and course difficulty) and qualitative metrics (open-ended text comments from students).
 * **The Useful Insight:** Simply stating "Data Structures has a 2.5 rating" is just a fact, not an insight. An actionable insight would be: *"Data Structures has a 40% negative feedback rate specifically because students are frequently using the phrases 'fast teaching' and 'too theoretical' in their reviews, indicating the curriculum pace must be adjusted immediately."*
 
+
+---
+
+## 📚 Learning Milestone 2: Reading & Interpreting a Sample Data Science Project Repository
+
+### 1. Project Intent & High-Level Flow
+* **Problem Addressed**: The repository aims to address poor academic performance and student dissatisfaction by analyzing university feedback. Its overarching goal is to transform subjective student surveys into objective, actionable recommendations for administrators.
+* **Data Science Workflow**: The workflow follows a structured pipeline: collecting raw survey evidence, preprocessing the text, applying NLP models (Sentiment Analysis/Keyword Extraction), computing KPIs, and deploying findings to a visual dashboard.
+* **Structure & Lifecycle**: The folders mirror the lifecycle stages: `data/` represents "Data Gathering", `processing/` and `notebooks/` represent "Exploration and Modeling", and `dashboard/` represents the "Deployment and Insight Delivery" stage.
+
+### 2. Repository Structure & File Roles
+* **Folder Roles**:
+  * `data/`: Stores immutable raw dataset inputs (e.g., `feedback.csv`).
+  * `notebooks/`: Serves as a sandbox for exploratory data analysis (EDA), drafting charts, and testing algorithms loosely.
+  * `processing/` (Scripts): Contains finalized, version-controlled Python modules (`clean_data.py`, `sentiment.py`) used by the main application.
+  * `dashboard/`: Houses the final deployment app (`app.py`), directly serving the generated insights to end-users.
+* **Exploratory vs. Finalized Work**: Exploratory work happens in notebooks—it is experimental, messy, and meant for the scientist's eyes. Finalized analysis is ported into `.py` scripts (`processing/`) which are modular, optimized, and heavily tested for production use.
+* **Cautious Areas for New Contributors**: A contributor should be highly cautious when modifying files in `processing/`. Because these scripts handle core programmatic data transformations, a breaking change here will silently cascade and crash the downstream `dashboard/`.
+
+### 3. Assumptions, Gaps, and Open Questions
+* **Assumptions Made**: The codebase assumes all `feedback.csv` files follow an identical, predefined column format and that textual feedback is predominantly English (as basic NLTK/TextBlob operations are utilized).
+* **Missing Documentation/Gaps**: The repository currently lacks explicit documentation on the data cleaning rules—specifically, how missing ratings are handled mathematically (e.g., dropping vs. imputing).
+* **One Improvement**: Introducing thorough function docstrings outlining exact input/output shapes for functions in `processing/`, alongside a step-by-step developer setup guide (`CONTRIBUTING.md`), would significantly improve onboarding times.
+

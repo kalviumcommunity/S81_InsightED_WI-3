@@ -32,3 +32,4 @@ InsightED is a decision-support data analytics system designed for universities.
 * **The Question:** "Which specific courses are causing the highest rate of negative student feedback, and what specific topics or teaching styles are driving this dissatisfaction?"
 * **The Type of Data Needed:** We need end-of-semester student survey feedback. This comes directly from the university's evaluation systems. It represents quantitative metrics (ratings from 1-5 on faculty and course difficulty) and qualitative metrics (open-ended text comments from students).
 * **The Useful Insight:** Simply stating "Data Structures has a 2.5 rating" is just a fact, not an insight. An actionable insight would be: *"Data Structures has a 40% negative feedback rate specifically because students are frequently using the phrases 'fast teaching' and 'too theoretical' in their reviews, indicating the curriculum pace must be adjusted immediately."*
+

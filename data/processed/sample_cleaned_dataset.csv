@@ -1,0 +1,4 @@
+id,name,value,date,is_valid
+1,device_A,10.5,2026-04-10,true
+3,device_A,11.2,2026-04-12,true
+4,UNKNOWN,12.0,2026-04-13,false
